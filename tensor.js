@@ -39,8 +39,6 @@ async function init() {
                 const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
-            const classPrediction = classLabels[i] + ": " + funk;
-            labelContainer.childNodes[i].innerHTML = classPrediction;
         }
     }, {
         includeSpectrogram: true, // in case listen should return result.spectrogram
