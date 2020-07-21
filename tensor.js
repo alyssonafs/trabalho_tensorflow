@@ -38,6 +38,8 @@ async function init() {
             if (result.scores[i].toFixed(2) >= 0.85) {
                 const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
+            } else{
+                labelContainer.childNodes[i].innerHTML = null;
             }
         }
     }, {
