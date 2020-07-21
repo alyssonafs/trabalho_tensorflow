@@ -21,6 +21,9 @@ async function createModel() {
 }
 
 async function init() {
+    var funk = 0;
+    var pagode = 0;
+    var rock = 0;
     const recognizer = await createModel();
     const classLabels = recognizer.wordLabels(); // get class labels
     const labelContainer = document.getElementById("label-container");
