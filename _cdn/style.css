@@ -1,0 +1,72 @@
+.main_content{
+    background-color: #CCC;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 0 2px;
+    margin: 40px auto;
+}
+.main_topo{
+    text-align: center;
+    margin: 40px auto;
+    color: #FFF;
+    background-color: green;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 5px;
+}
+.main_topo p{
+    font-size: 1.4em;
+}
+.main_genere{
+    text-align: center;
+    margin: 50px auto;
+}
+.main_genere > h2{
+    font-size: 1.5em;
+}
+.main_genere > p{
+    color: red;
+}
+.execute{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.execute .btn{
+    flex-basis: 20%;
+    margin: 50px auto;
+    color: #FFF;
+    background-color: green;
+    padding: 5px 30px;
+}
+#label-genero{
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-basis: 100%;
+    
+}
+#label-genero p{
+    text-align: center;
+    font-size: 3em;
+    color: green;
+}
+footer{
+    background-color: green;
+    color: #FFF;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer > p{
+    flex-basis: 40%;
+    margin: 0 auto;
+    padding: 2px 30px;
+}

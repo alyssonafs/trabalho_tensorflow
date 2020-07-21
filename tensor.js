@@ -19,11 +19,11 @@ async function createModel() {
 
     return recognizer;
 }
-
+var funk = 0;
+var pagode = 0;
+var rock = 0;
 async function init() {
-    var funk = 0;
-    var pagode = 0;
-    var rock = 0;
+    
     const recognizer = await createModel();
     const classLabels = recognizer.wordLabels(); // get class labels
     const labelContainer = document.getElementById("label-container");
@@ -39,8 +39,15 @@ async function init() {
         // render the probability scores per class
         for (let i = 0; i < classLabels.length; i++) {
             if (result.scores[i].toFixed(2) >= 0.85) {
-                const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
-                labelContainer.childNodes[i].innerHTML = classPrediction;
+                if(i === 0){
+                    funk++;
+                }
+                if(i === 1){
+                    pagode++;
+                }
+                if(i === 2){
+                    rock++;
+                }
             } else{
                 labelContainer.childNodes[i].innerHTML = null;
             }
@@ -54,5 +61,18 @@ async function init() {
 
     //Stop the recognition in 5 seconds.
     setTimeout(() => recognizer.stopListening(), 20000);
+    
+}
+async function genere() {
+    const labelGenero = document.getElementById("label-genero");
+    if(funk > pagode && funk > rock){
+        labelGenero.innerHTML = "<p>Música do Gênero FUNK !!!</p>";
+    }
+    if(pagode > funk && pagode > rock){
+        labelGenero.innerHTML = "<p>Música do Gênero PAGODE !!!</p>";
+    }
+    if(rock > pagode && rock > funk){
+        labelGenero.innerHTML = "<p>Música do Gênero ROCK !!!</p>";
+    }
 }
 
